@@ -125,7 +125,7 @@ public class CommandHandler {
             return;
         }
 
-        if (isUrlAlreadyExist(projectIndex,projectUrl)) {
+        if (isUrlAlreadyExist(projectIndex, projectUrl)) {
             overwriteResource(projectName, projectUrl, descriptionOfUrl, projectIndex);
         } else {
             addNewResource(projectName, projectUrl, descriptionOfUrl, projectIndex);
@@ -152,7 +152,7 @@ public class CommandHandler {
         return projects.get(projectIndex).isUrlAlreadyExist(projectUrl);
     }
 
-    private int searchExistingProjectIndex(String projectName){
+    private int searchExistingProjectIndex(String projectName) {
         for (int i = 0; i < projects.size(); i++) {
             if (projects.get(i).getProjectName().equals(projectName)) {
                 return i;
